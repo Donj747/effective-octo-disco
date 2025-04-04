@@ -17,4 +17,4 @@ api_key = os.getenv('API_KEY')
 api_secret = os.getenv('API_SECRET')
 
 print(f"API_KEY: {api_key}")
-print(f"API_SECRET: {api_secret}")            set_env_vars.pypython
+print(f"API_SECRET: {api_secret}")            
