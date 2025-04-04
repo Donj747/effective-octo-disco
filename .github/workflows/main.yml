@@ -1,0 +1,20 @@
+set_env_vars.pypython   
+import os
+import secrets
+import string
+
+# Generate a random string
+def generate_random_string(length=32):
+    characters = string.ascii_letters + string.digits
+    return ''.join(secrets.choice(characters) for _ in range(length))
+
+# Set environment variables with random values
+os.environ['API_KEY'] = generate_random_string()
+os.environ['API_SECRET'] = generate_random_string()
+
+# Retrieve environment variables
+api_key = os.getenv('API_KEY')
+api_secret = os.getenv('API_SECRET')
+
+print(f"API_KEY: {api_key}")
+print(f"API_SECRET: {api_secret}")            set_env_vars.pypython
